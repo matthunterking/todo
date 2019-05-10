@@ -1,21 +1,9 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import s from "./style.module.css";
 import ListItem from "../ListItem";
+import withListItems from "../../hoc/withListItems";
 
-const ToDoList = props => {
-  const [listItems, setListItems] = useState([]);
-  const [completedItems, setCompletedItems] = useState(null);
-
-  useEffect(() => {
-    axios.get("http://localhost:3000/api/todos").then(({ data }) => {
-      const sortedData = data.sort((a, b) => b.id - a.id);
-      const completed = data.filter(item => item.completed);
-      setListItems(sortedData);
-      setCompletedItems(completed.length);
-    });
-  }, []);
-
+const ToDoList = ({ listItems, completedItems }) => {
   return (
     <div>
       <p>Total number of items {listItems.length}</p>
@@ -33,4 +21,4 @@ const ToDoList = props => {
   );
 };
 
-export default ToDoList;
+export default withListItems(ToDoList);
