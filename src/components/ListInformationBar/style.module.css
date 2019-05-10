@@ -2,8 +2,24 @@
   top: 0;
   position: sticky;
   z-index: 1;
-  padding: 2rem 0.5rem;
+  padding: 1rem 0.5rem;
   color: white;
   background-color: #06183d;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.button {
+  background-color: #fbdd0f;
+  border: none;
+  box-shadow: 0 1px #ffffff inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+  font-size: 20px;
+  margin: 1rem 0;
+  transition: all 0.4s ease-out;
+}
+
+.button:hover {
+  background-color: #f9ec90;
 }

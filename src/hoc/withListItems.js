@@ -6,7 +6,7 @@ const withListItems = WrappedComponent => {
   const WithListItems = props => {
     const [isLoading, setLoading] = useState(true);
     const [listItems, setListItems] = useState([]);
-    const [completedItems, setCompletedItems] = useState(null);
+    const [incompletedItems, setIncompletedItems] = useState(null);
 
     useEffect(
       () => {
@@ -15,9 +15,9 @@ const withListItems = WrappedComponent => {
             .get("http://localhost:3000/api/todos")
             .then(({ data }) => {
               const sortedData = data.sort((a, b) => b.id - a.id);
-              const completed = data.filter(item => item.completed);
+              const incompleted = data.filter(item => !item.completed);
               setListItems(sortedData);
-              setCompletedItems(completed.length);
+              setIncompletedItems(incompleted);
               setLoading(false);
             })
             .catch(error => console.log(error));
@@ -30,7 +30,7 @@ const withListItems = WrappedComponent => {
     return (
       <WrappedComponent
         listItems={listItems}
-        completedItems={completedItems}
+        incompletedItems={incompletedItems}
         {...props}
       />
     );

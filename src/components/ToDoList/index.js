@@ -4,14 +4,22 @@ import ListItem from "../ListItem";
 import ListInformationBar from "../ListInformationBar";
 import withListItems from "../../hoc/withListItems";
 
-const ToDoList = ({ listItems, completedItems }) => {
+const ToDoList = ({
+  showCompleted,
+  setShowCompleted,
+  listItems,
+  incompletedItems
+}) => {
+  const itemsToDisplay = showCompleted ? listItems : incompletedItems;
   return (
     <div className={s.container}>
       <ListInformationBar
         numberOfItems={listItems.length}
-        numberOfCompletedItems={completedItems}
+        numberOfCompletedItems={listItems.length - incompletedItems.length}
+        showCompleted={showCompleted}
+        setShowCompleted={setShowCompleted}
       />
-      {listItems.map(({ userId, id, title, completed }) => (
+      {itemsToDisplay.map(({ userId, id, title, completed }) => (
         <ListItem
           key={id}
           title={title}
