@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import s from "./style.module.css";
+import ListItem from "../ListItem";
 
 const ToDoList = props => {
   const [listItems, setListItems] = useState([]);
@@ -20,12 +21,13 @@ const ToDoList = props => {
       <p>Total number of items {listItems.length}</p>
       <p>Total number completed {completedItems}</p>
       {listItems.map(({ userId, id, title, completed }) => (
-        <div key={id} className={s.listItem}>
-          <h2>{title}</h2>
-          <p>User : {userId}</p>
-          <p> ID : {id}</p>
-          <p>{completed ? "completed" : "not completed"}</p>
-        </div>
+        <ListItem
+          key={id}
+          title={title}
+          userId={userId}
+          id={id}
+          completed={completed}
+        />
       ))}
     </div>
   );
