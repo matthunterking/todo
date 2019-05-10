@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import s from "./style.module.css";
 import ListItem from "../ListItem";
 import ListInformationBar from "../ListInformationBar";
 import withListItems from "../../hoc/withListItems";

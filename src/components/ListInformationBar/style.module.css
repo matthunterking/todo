@@ -23,3 +23,9 @@
 .button:hover {
   background-color: #f9ec90;
 }
+
+@media only screen and (min-width: 460px) {
+  .button {
+    max-width: 40%;
+  }
+}
