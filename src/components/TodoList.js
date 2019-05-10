@@ -7,8 +7,8 @@ const ToDoList = props => {
 
   useEffect(() => {
     axios.get("http://localhost:3000/api/todos").then(({ data }) => {
-      console.log(data);
-      setListItems(data);
+      const sortedData = data.sort((a, b) => b.id - a.id);
+      setListItems(sortedData);
     });
   }, []);
 
