@@ -14,7 +14,7 @@ const ListItem = ({ id, title, userId, completed }) => {
         {completed ? (
           <p className={cn(s.stats, s.tick)}>&#10003;</p>
         ) : (
-          <p className={cn(s.stats, s.cross)}>&#10007;</p>
+          <p className={cn(s.stats, s.cross)} />
         )}
       </div>
     </div>

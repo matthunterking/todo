@@ -5,6 +5,9 @@
   margin-bottom: 0.5rem;
   position: relative;
   padding: 1rem 0.5rem;
+  background-color: white;
+  color: black;
+  overflow: hidden;
 }
 
 .container:before {
@@ -14,7 +17,7 @@
   left: 0;
   top: 0;
   width: 100%;
-  background-color: #ff4043;
+  background-color: yellow;
 }
 
 .completed.container::before {
@@ -43,5 +46,5 @@
 }
 
 .cross {
-  color: #ff4043;
+  color: yellow;
 }
