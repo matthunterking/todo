@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.5",
+    "express": "4.16.4",
+    "nodemon": "1.19.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
-    "express": "4.16.4",
-    "nodemon": "1.19.0"
+    "react-scripts": "3.0.1"
   },
   "homepage": "https://github.com/EurostarDigital/graduate_exercise#readme",
   "scripts": {
