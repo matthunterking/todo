@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Loading from "../components/Loading";
 
 const withListItems = WrappedComponent => {
   const WithListItems = props => {
@@ -25,7 +26,7 @@ const withListItems = WrappedComponent => {
       [isLoading]
     );
 
-    if (isLoading) return <p>Loading...</p>;
+    if (isLoading) return <Loading />;
     return (
       <WrappedComponent
         listItems={listItems}
