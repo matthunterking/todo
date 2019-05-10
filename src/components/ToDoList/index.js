@@ -5,7 +5,7 @@ import withListItems from "../../hoc/withListItems";
 
 const ToDoList = ({ listItems, completedItems }) => {
   return (
-    <div>
+    <div className={s.container}>
       <p>Total number of items {listItems.length}</p>
       <p>Total number completed {completedItems}</p>
       {listItems.map(({ userId, id, title, completed }) => (

@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import ToDoList from "./components/ToDoList";
+import Title from "./components/Title";
+import Container from "./components/Container";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <h1>To do List</h1>
+      <Container>
+        <Title>To do List</Title>
         <ToDoList />
-      </div>
+      </Container>
     );
   }
 }
