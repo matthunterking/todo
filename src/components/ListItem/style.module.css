@@ -1,3 +1,47 @@
 .container {
-  border: 1px solid black;
+  border: 1px solid #55565a;
+  border-radius: 4px;
+  box-shadow: 0 0 1px rgba(34, 25, 25, 0.4);
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding: 1rem 0.5rem;
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #ff4043;
+}
+
+.completed.container::before {
+  background-color: #00bfa4;
+}
+.statusContainer,
+.informationContainer {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.informationContainer {
+  width: 74%;
+}
+.statusContainer {
+  width: 25%;
+  text-align: center;
+}
+
+.stats {
+  font-size: 40px;
+}
+
+.tick {
+  color: #00bfa4;
+}
+
+.cross {
+  color: #ff4043;
 }
