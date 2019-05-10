@@ -5,13 +5,17 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "express": "4.16.4",
+    "nodemon": "1.19.0"
   },
+  "homepage": "https://github.com/EurostarDigital/graduate_exercise#readme",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "nodemon index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
