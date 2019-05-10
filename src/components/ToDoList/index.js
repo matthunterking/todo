@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import s from "./style.module.css";
 import ListItem from "../ListItem";
 import ListInformationBar from "../ListInformationBar";
@@ -12,7 +12,7 @@ const ToDoList = ({
 }) => {
   const itemsToDisplay = showCompleted ? listItems : incompletedItems;
   return (
-    <div className={s.container}>
+    <Fragment>
       <ListInformationBar
         numberOfItems={listItems.length}
         numberOfCompletedItems={listItems.length - incompletedItems.length}
@@ -28,7 +28,7 @@ const ToDoList = ({
           completed={completed}
         />
       ))}
-    </div>
+    </Fragment>
   );
 };
 
